@@ -12,7 +12,6 @@ function App() {
       <Header />
       <ShoppingList />
       <Form />
-      <ShowProduce />
     </ContentArea>
   );
 }
