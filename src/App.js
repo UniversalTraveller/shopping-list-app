@@ -2,14 +2,15 @@ import React from "react";
 import Header from "./Header";
 import ShoppingList from "./ShoppingList";
 import Form from "./Form";
+import ContentArea from "./ContentArea";
 
 function App() {
   return (
-    <div className="App">
+    <ContentArea>
       <Header />
       <ShoppingList />
       <Form />
-    </div>
+    </ContentArea>
   );
 }
 
