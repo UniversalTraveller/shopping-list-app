@@ -3,6 +3,8 @@ import Header from "./Header";
 import ShoppingList from "./ShoppingList";
 import Form from "./Form";
 import ContentArea from "./ContentArea";
+import useStore from "./useStore";
+import ShowProduce from "./ShowProduce";
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <Header />
       <ShoppingList />
       <Form />
+      <ShowProduce />
     </ContentArea>
   );
 }
