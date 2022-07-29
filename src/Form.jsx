@@ -13,9 +13,6 @@ export default function Form() {
   getProduce();
   const items = useStore((state) => state.items);
 
-  {
-    /* The search: */
-  }
   function search() {
     const { Searcher } = require("fast-fuzzy");
     const searcher = new Searcher(items, {
@@ -30,7 +27,6 @@ export default function Form() {
     search();
   }, [formInput]);
 
-  //setSearchResult(data); //returns ["abc", "bcd"];
   return (
     <>
       <h2>Was willst du einkaufen?</h2>
