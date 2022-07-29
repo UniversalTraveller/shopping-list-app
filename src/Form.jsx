@@ -1,5 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Form() {
-  return <h2>Was willst du einkaufen?</h2>;
+  const [formInput, setFormInput] = useState();
+
+  function handleChange(event) {
+    setFormInput(event.target.value);
+  }
+  return (
+    <>
+      <h2>Was willst du einkaufen?</h2>
+      <form>
+        <input type={"text"} onChange={handleChange}></input>
+        <p>{formInput}</p>
+      </form>
+    </>
+  );
 }
