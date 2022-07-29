@@ -5,6 +5,7 @@ import { fuzzy, Searcher } from "fast-fuzzy";
 export default function Form() {
   const [formInput, setFormInput] = useState("");
   const [searchResult, setSearchResult] = useState([]);
+  const [selectedProduce, setSelectedProduce] = useState([]);
 
   function handleChange(event) {
     setFormInput(event.target.value);
@@ -20,7 +21,7 @@ export default function Form() {
     });
     const data = searcher.search(formInput);
     setSearchResult(data);
-    console.log(searchResult);
+    //console.log(searchResult);
   }
 
   useEffect(() => {
@@ -31,6 +32,9 @@ export default function Form() {
     <>
       <h2>Was willst du einkaufen?</h2>
       <form>
+        {selectedProduce.map((item) => (
+          <p>{item}</p>
+        ))}
         <input
           type={"text"}
           name={"whatToBuy"}
@@ -41,7 +45,12 @@ export default function Form() {
       </form>
 
       {searchResult.map((item) => (
-        <button>{item.name.de}</button>
+        <button
+          type={"button"}
+          onClick={() => setSelectedProduce([...selectedProduce, item.name.de])}
+        >
+          {item.name.de}
+        </button>
       ))}
     </>
   );
