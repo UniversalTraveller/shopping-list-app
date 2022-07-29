@@ -38,14 +38,11 @@ export default function Form() {
           placeholder={"Tippe um zu suchen…"}
           onChange={handleChange}
         ></input>
-        <p>{formInput}</p>
       </form>
 
-      <ul>
-        {searchResult.map((item) => (
-          <li>{item.name.de}</li>
-        ))}
-      </ul>
+      {searchResult.map((item) => (
+        <button>{item.name.de}</button>
+      ))}
     </>
   );
 }
