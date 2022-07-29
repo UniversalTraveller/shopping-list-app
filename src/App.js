@@ -1,11 +1,14 @@
+import React from "react";
+import Header from "./Header";
+import ShoppingList from "./ShoppingList";
+import Form from "./Form";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+      <Header />
+      <ShoppingList />
+      <Form />
     </div>
   );
 }
